@@ -25,7 +25,5 @@ repositories {
 }
 
 dependencies {
-    implementation('com.amazon:fortpayment:+:release@aar') {
-        transitive = true
-    }
+    implementation('com.amazon:fortpayment:+:release@aar') { transitive = true }
 }

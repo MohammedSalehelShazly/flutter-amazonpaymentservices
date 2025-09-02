@@ -14,12 +14,12 @@ def flutterVersionCode = (localProperties.getProperty('flutter.versionCode') ?: 
 def flutterVersionName = (localProperties.getProperty('flutter.versionName') ?: '1.0')
 
 android {
-    namespace "com.amazon.flutter_amazonpaymentservices_example"
+    namespace "com.payfort.flutter.payfort_flutter_plugin_example"
 
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.amazon.flutter_amazonpaymentservices_example"
+        applicationId "com.payfort.flutter.payfort_flutter_plugin_example"
         minSdk 21
         targetSdk 35
 

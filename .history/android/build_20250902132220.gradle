@@ -1,20 +1,26 @@
 plugins {
     id "com.android.library"
-    // فعل ده لو عندك ملفات Kotlin في البلجن:
+    // لو عندك ملفات Kotlin في البلجن فعلاً، فعّل السطر التالي:
     // id "org.jetbrains.kotlin.android"
+    id "dev.flutter.flutter-gradle-plugin"
 }
+
+group = "com.amazon.flutter_amazonpaymentservices"
+version = "1.0"
 
 android {
     namespace "com.amazon.flutter_amazonpaymentservices"
     compileSdk 34
 
-    defaultConfig { minSdk 21 }
+    defaultConfig {
+        minSdk 21
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    // لو فعّلت Kotlin فوق:
+    // لو فعّلت Kotlin فوق، فعّل ده:
     // kotlinOptions { jvmTarget = "17" }
 }
 
