@@ -36,6 +36,7 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
+import io.flutter.plugin.common.PluginRegistry;
 
 /**
  * FlutterAmazonpaymentservicesPlugin
@@ -55,26 +56,26 @@ public class FlutterAmazonpaymentservicesPlugin implements FlutterPlugin, Method
 
     }
 
-    // public static void registerWith(PluginRegistry.Registrar registrar) {
-    //     final MethodChannel channel = new MethodChannel(registrar.messenger(), METHOD_CHANNEL_KEY);
-    //     FlutterAmazonpaymentservicesPlugin handler = new FlutterAmazonpaymentservicesPlugin();
-    //     handler.methodChannel = channel;
-    //     activity = registrar.activity();
-    //     channel.setMethodCallHandler(handler);
+    public static void registerWith(PluginRegistry.Registrar registrar) {
+        final MethodChannel channel = new MethodChannel(registrar.messenger(), METHOD_CHANNEL_KEY);
+        FlutterAmazonpaymentservicesPlugin handler = new FlutterAmazonpaymentservicesPlugin();
+        handler.methodChannel = channel;
+        activity = registrar.activity();
+        channel.setMethodCallHandler(handler);
 
-    //     registrar.addActivityResultListener((requestCode, resultCode, data) -> {
-    //         if (requestCode == PAYFORT_REQUEST_CODE )
-    //             if(data!=null && resultCode == RESULT_OK)
-    //                 fortCallback.onActivityResult(requestCode, resultCode, data);
-    //             else{
-    //                 Intent intent = new Intent();
-    //                 intent.putExtra("","");
-    //                 fortCallback.onActivityResult(requestCode, resultCode, intent);
-    //             }
-    //         return true;
-    //     });
+        registrar.addActivityResultListener((requestCode, resultCode, data) -> {
+            if (requestCode == PAYFORT_REQUEST_CODE )
+                if(data!=null && resultCode == RESULT_OK)
+                    fortCallback.onActivityResult(requestCode, resultCode, data);
+                else{
+                    Intent intent = new Intent();
+                    intent.putExtra("","");
+                    fortCallback.onActivityResult(requestCode, resultCode, intent);
+                }
+            return true;
+        });
 
-    // }
+    }
 
 
     @Override

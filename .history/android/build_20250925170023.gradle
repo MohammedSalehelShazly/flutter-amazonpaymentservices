@@ -1,11 +1,16 @@
+group 'com.amazon.flutter_amazonpaymentservices'
+version '1.0'
 
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://android-sdk.payfort.com" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.5.2'
+    }
 }
-
-group = 'com.amazon.flutter_amazonpaymentservices'
-version = '1.0'
 
 repositories {
     google()
@@ -15,20 +20,16 @@ repositories {
 
 android {
     namespace 'com.example.flutter_amazonpaymentservices'
-    compileSdk 34
+    compileSdkVersion 34
 
     defaultConfig {
-        minSdk 21
+        minSdkVersion 21
         consumerProguardFiles 'proguard-rules.pro'
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = '17'
     }
 }
 

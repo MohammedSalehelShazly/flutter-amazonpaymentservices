@@ -1,3 +1,5 @@
+// example/android/settings.gradle
+
 pluginManagement {
     // --- Resolve Flutter SDK path robustly ---
     def props = new Properties()
@@ -6,10 +8,8 @@ pluginManagement {
         lp.withInputStream { props.load(it) }
     }
 
-    // حاول نقرأ من local.properties، ولو مش موجود نزود fallback لمسارك المحلي
     def flutterSdkPath = props.getProperty("flutter.sdk")
     if (flutterSdkPath == null || flutterSdkPath.trim().isEmpty()) {
-        // عدّل السطر ده لو مسار الـ Flutter SDK عندك مختلف
         flutterSdkPath = "/Users/mohammedsaleh/flutter"
     }
 
@@ -25,10 +25,10 @@ pluginManagement {
     }
 }
 
+// Important: ده Plugin اللودر الجديد بتاع Flutter
 plugins {
     id "dev.flutter.flutter-plugin-loader" version "1.0.0"
     id "com.android.application" version "8.5.2" apply false
-    id "com.android.library" version "8.5.2" apply false   // ← مضاف
     id "org.jetbrains.kotlin.android" version "1.9.22" apply false
 }
 

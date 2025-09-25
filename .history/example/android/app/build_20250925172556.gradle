@@ -1,3 +1,4 @@
+// example/android/app/build.gradle
 
 plugins {
     id "com.android.application"
@@ -5,6 +6,7 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
+// ↓ أي أكواد تهيئة / متغيرات لازم تكون بعد plugins{}
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -48,5 +50,6 @@ android {
 }
 
 flutter {
+    // مسار البلجن (المشروع الأم)
     source '../..'
 }

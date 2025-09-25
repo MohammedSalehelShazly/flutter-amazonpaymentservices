@@ -1,11 +1,12 @@
+// android/build.gradle  (module: flutter_amazonpaymentservices)
+
+group 'com.amazon.flutter_amazonpaymentservices'
+version '1.0'
 
 plugins {
     id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.android'   // اتركه لو الكود عندك Kotlin (غالبًا نعم)
 }
-
-group = 'com.amazon.flutter_amazonpaymentservices'
-version = '1.0'
 
 repositories {
     google()
@@ -14,7 +15,7 @@ repositories {
 }
 
 android {
-    namespace 'com.example.flutter_amazonpaymentservices'
+    namespace 'com.example.flutter_amazonpaymentservices'  // طابقته مع تعديلك
     compileSdk 34
 
     defaultConfig {
