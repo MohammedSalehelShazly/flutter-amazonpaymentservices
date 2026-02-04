@@ -135,8 +135,8 @@ public class SwiftFlutterAmazonpaymentservicesPlugin: NSObject, FlutterPlugin {
       }
 
       paymentRequest.paymentSummaryItems = [
-          PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: amount))
-          PKPaymentSummaryItem(label: "Binge - بنج", amount: NSDecimalNumber(string: amount), status: "final_price")
+          // PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: amount))
+          PKPaymentSummaryItem(label: "Binge Here", amount: NSDecimalNumber(string: amount), status: "final_price")
       ]
 
       guard let viewController = UIApplication.shared.windows.first?.rootViewController else {
