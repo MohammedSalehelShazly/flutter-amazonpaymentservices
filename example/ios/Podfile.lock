@@ -27,10 +27,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_amazonpaymentservices: 65a823f0cde190eaa78f1441c73b6c766ac2b899
-  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  flutter_amazonpaymentservices: 30d57c19319b81de776345023e4f0697c7d94866
+  path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
   PayFortSDK: a33a8488859d7666b3709f347ebb990697e1d110
 
 PODFILE CHECKSUM: 6d989b2a230232bcc0a5158aa4c0c4ecbc6046b6
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
