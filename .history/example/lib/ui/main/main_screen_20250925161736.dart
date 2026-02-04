@@ -370,7 +370,6 @@ class _MainScreen extends State<MainScreen> {
 
     var params = {
       "displayAmount": requestParam['amount'], // Ensure it's a string
-      "companyName": "Company Name",
       "merchantIdentifier": "merchant.com.",
       'countryCode': requestParam['country_code'],
       'currencyCode': requestParam['currency'],
